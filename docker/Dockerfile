@@ -45,7 +45,10 @@ RUN set -x \
   procps \
   netcat-openbsd \
   unzip \
+  sudo \
   npm \
+  && sudo -v \
+  && curl https://rclone.org/install.sh | sudo bash \
   && rm -rf /var/cache/apk/* \
   && apk update \
   && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
